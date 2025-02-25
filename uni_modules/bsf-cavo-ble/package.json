@@ -1,0 +1,79 @@
+{
+    "id": "bsf-cavo-ble",
+    "displayName": "Cavo智能蓝牙手环（BLE）-UTS插件",
+    "version": "1.0.0",
+    "description": "适用于Cavo智能BLE蓝牙手环的UTS插件，支持安卓和IOS",
+    "keywords": [
+        "cavo",
+        "ble",
+        "蓝牙",
+        "手环",
+        "uts"
+    ],
+    "repository": "https://github.com/byteee-fund/bsf-cavo-ble-doc",
+    "engines": {
+        "HBuilderX": "^3.6.8"
+    },
+    "dcloudext": {
+        "type": "uts",
+        "sale": {
+            "regular": {
+                "price": "399.00"
+            },
+            "sourcecode": {
+                "price": "799.00"
+            }
+        }
+    },
+    "uni_modules": {
+        "dependencies": [],
+        "encrypt": [],
+        "platforms": {
+            "cloud": {
+                "tcb": "n",
+                "aliyun": "n",
+                "alipay": "n"
+            },
+            "client": {
+                "Vue": {
+                    "vue2": "y",
+                    "vue3": "y"
+                },
+                "App": {
+                    "app-android": "y",
+                    "app-ios": "y",
+                    "app-harmony": "n"
+                },
+                "H5-mobile": {
+                    "Safari": "n",
+                    "Android Browser": "n",
+                    "微信浏览器(Android)": "n",
+                    "QQ浏览器(Android)": "n"
+                },
+                "H5-pc": {
+                    "Chrome": "n",
+                    "IE": "n",
+                    "Edge": "n",
+                    "Firefox": "n",
+                    "Safari": "n"
+                },
+                "小程序": {
+                    "微信": "n",
+                    "阿里": "n",
+                    "百度": "n",
+                    "字节跳动": "n",
+                    "QQ": "n",
+                    "钉钉": "n",
+                    "快手": "n",
+                    "飞书": "n",
+                    "京东": "n"
+                },
+                "快应用": {
+                    "华为": "n",
+                    "联盟": "n"
+                }
+            }
+        }
+    },
+    "name": "Cavo智能蓝牙手环（BLE）-UTS插件"
+}

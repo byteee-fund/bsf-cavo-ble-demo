@@ -1,0 +1,96 @@
+
+export type InitOptions = {
+  onConnectionStateChange ?: (res : boolean) => void
+  onConnectionSuccess ?: (res : boolean) => void,
+  onError? : (res:number) => void,
+  onLoginStateChange? : (res:number) => void,
+  onDeviceInfo?: (res: DeviceInfo) => void,
+  onDeviceFunction? : (res: any) => void,
+  onStepDataReceiveIndication?: (res: StepDataInfo) => void,
+  onSleepDataReceiveIndication?: (res: SleepDataInfo) => void,
+  onSyncDataBegin?: ()=>void,
+  onSyncDataEnd?:()=>void,
+}
+
+export type RequestPermissionOptions = {
+  onPermit?: () => void,
+  onRefuse?: ()	=> void
+}
+
+export type Device = {
+	name?: String,
+	address: String
+}
+
+
+export type DeviceInfo = {
+	deviceNumber: number,
+	deviceName: String | null,
+	versionCode: number,
+	versionName: String | null,
+	fontVersionCode: number,
+	fontVersionName: String | null
+}
+
+export type StepDataInfo = {
+	year: number,
+	month: number,
+	day: number,
+	itemCount: number,
+	items: StepDataItem[]
+}
+
+export type StepDataItem = {
+	offset: number,
+	mode: number,
+	stepCount: number,
+	activeTime:number,
+	calory: number,
+	distance: number
+}
+
+export type SleepDataInfo = {
+	year: number,
+	month: number,
+	day: number,
+	itemCount: number,
+	items: SleepDataItem[]
+}
+
+export type SleepDataItem = {
+	minutes: number,
+	mode: number
+}
+
+export type ScanOptions = {
+	onWristbandDeviceFind ?: (device: Device, rssi: number) => void,
+	onLeScanEnable ?: (enable: boolean) => void,
+	onWristbandLoginStateChange ?: (connected: boolean) => void,
+	onStartLeScan?: () => void,
+	onCancelLeScan?: () => void,
+	onStopLeScan ?: () => void
+}
+
+
+export type GetDataOptions = {
+	year: number,
+	month: number,
+	day: number,
+	callback : (res:any) => void
+}
+
+
+// export type GetStepDataInfo = {
+// 	id: number,
+// 	userID: String,
+// 	offset: number,
+// 	year: number,
+// 	month: number,
+// 	day: number,
+// 	mode: number,
+// 	stepCount: number,
+// 	activeTime:number,
+// 	calory: number,
+// 	distance: number,
+// 	date: String
+// }
